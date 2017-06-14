@@ -3,6 +3,10 @@ os: linux
 files:
   - source: /
     destination: /home/ec2-user/nodejs/
+  - source: nodejs/stop.sh
+    destination: /home/ec2-user/nodejs/stop.sh
+  - source: nodejs/start.sh
+    destination: /home/ec2-user/nodejs/start.sh
 hooks:
   BeforeInstall:
     - location: /home/ec2-user/nodejs/stop.sh
