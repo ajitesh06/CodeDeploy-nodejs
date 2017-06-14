@@ -1,0 +1,12 @@
+version: 0.0
+os: linux
+files:
+  - source: nodejs/main.js
+    destination: /home/ec2-user/nodejs/main.js
+hooks:
+  BeforeInstall:
+    - location: /home/ec2-user/nodejs/forever stop main.js
+      runas: root
+  AfterInstall:
+    - location: /home/ec2-user/nodejs/forever start main.js
+      runas: root
