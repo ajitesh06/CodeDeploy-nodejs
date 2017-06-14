@@ -1,0 +1,1 @@
+forever stop main.js
