@@ -1,3 +1,3 @@
 #!/bin/bash
 cd /home/ec2-user/nodejs
-node main.js stop
+forever stop main.js
