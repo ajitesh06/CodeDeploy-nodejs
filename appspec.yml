@@ -3,3 +3,12 @@ os: linux
 files:
   - source: /
     destination: /home/ec2-user/nodejs/
+hooks:
+  BeforeInstall:
+    - location: scripts/nodeinstall.sh
+      runas: root
+  AfterInstall:
+    - location: scripts/kill.sh
+      runas: root
+    - location: scripts/start.sh
+      runas: root
