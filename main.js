@@ -8,7 +8,7 @@ http.createServer(function (request, response) {
    response.writeHead(200, {'Content-Type': 'text/plain'});
    
    // Send the response body as "Hello World"
-   response.end('Hello World welcome to codeDeploy.\n Its working\nI guess');
+   response.end('Hello World welcome to codeDeploy.\nIts working');
 }).listen(8080);
 
 // Console will print the message
