@@ -2,11 +2,8 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ec2-user/nodejs/
+    destination: /home/ec2-user/CodeDeploy-nodejs/
 hooks:
-  ApplicationStop:
-    - location: scripts/stop.sh
-      runas: root
   BeforeInstall:
     - location: scripts/nodeinstall.sh
       runas: root
